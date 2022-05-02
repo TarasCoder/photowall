@@ -1,0 +1,22 @@
+.wrapper {
+  width: 350px;
+  height: 300px;
+  border: 2px solid black;
+}
+.img {
+  width: 350px;
+}
+.commentsBtn {
+  width: 150px;
+  height: 40px;
+}
+.removeBtn {
+  width: 150px;
+  height: 40px;
+  /* padding-top: 2px; */
+}
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
