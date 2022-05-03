@@ -8,6 +8,7 @@ function Card() {
       <img
         className={s.img}
         src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg"
+        alt="img"
       />
       <p>Description</p>
       <div className={s.btnGroup}>
