@@ -1,23 +1,19 @@
 import "./App.css";
-import { HiPlusCircle } from "react-icons/hi";
-import Card from "./components/Card";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import AddPhoto from "./components/AddPhoto";
 
 function App() {
+  
+
   return (
     <div className="App">
-      <h1 className="headerText">Photowall</h1>
-      <HiPlusCircle size={70} />
-      <div className="cardWrapper">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="AddPhoto" element={<AddPhoto />} />
+      </Routes>
+
     </div>
   );
 }
