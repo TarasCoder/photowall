@@ -4,20 +4,18 @@ import { HiPlusCircle } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import s from "./Home.module.css";
 
-function Home() {
-  const addBtn = () => {
-    console.log("Add btn clicked!");
-  };
+function Home(props) {
+
   return (
     <div>
       <h1 className="headerText">Photowall</h1>
       <nav>
         <Link to="/AddPhoto">
-          <HiPlusCircle className="linkClass" size={70} onClick={addBtn} />
+          <HiPlusCircle className="linkClass" size={70} />
         </Link>
       </nav>
 
-      <Cards />
+      <Cards itemObj={props.itemObject}/>
     </div>
   );
 }

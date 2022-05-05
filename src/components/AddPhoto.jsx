@@ -1,8 +1,9 @@
 import React from "react";
 import s from "./AddPhoto.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function AddPhoto() {
+function AddPhoto(props) {
   const [data, setData] = useState({
     link: "",
     descr: "",
@@ -13,10 +14,9 @@ function AddPhoto() {
     setData({ ...data, [name]: value });
   };
 
-  const addPost = (ev) => {
-    ev.preventDefault();
-    console.log("New Post");
-    console.log(data);
+  const addPost = () => {
+    console.log("New Post", data);
+    props.itemObj(data);
   };
 
   return (
@@ -37,9 +37,11 @@ function AddPhoto() {
           onChange={handleInput}
           placeholder="Description"
         />
-        <button className={s.addPostBtn} onClick={addPost}>
-          POST
-        </button>
+        <Link to="/">
+          <button className={s.addPostBtn} onClick={addPost}>
+            POST
+          </button>
+        </Link>
       </form>
     </div>
   );

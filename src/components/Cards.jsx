@@ -1,16 +1,13 @@
 import React from "react";
-import Card from "./Card"
-import { useState } from 'react';
+import Card from "./Card";
 
-function Cards() {
-
-  const [allCards, setCards] = useState([1,5,2]);
+function Cards(props) {
 
   return (
     <div>
       <div className="cardWrapper">
-        {allCards.map((item) => (
-          <Card />
+        {props.itemObj.map((item) => (
+          <Card descr={item.descr} img={item.link} />
         ))}
       </div>
     </div>
