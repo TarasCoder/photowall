@@ -3,9 +3,11 @@
   height: 300px;
   border: 2px solid black;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 .img {
-  width: 350px;
+  height: 180px;
+  margin-top: 15px;
 }
 .commentsBtn {
   width: 150px;

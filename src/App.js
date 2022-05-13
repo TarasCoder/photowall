@@ -6,17 +6,15 @@ import AddPhoto from "./components/AddPhoto";
 
 function App() {
   const [dataArr, setDataArr] = useState([
-    {
-      descr: "item",
-      link:
-        "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
-    },
+    // {
+      // descr: "item",
+      // link:
+      //   "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
+    // },
   ]);
-  const [data, setData] = useState("");
 
   const itemObj = (obj) => {
-    setData(obj);
-    setDataArr(() => [...dataArr, data]);
+    setDataArr((prev) => [...prev, obj]);
   };
 
   return (
