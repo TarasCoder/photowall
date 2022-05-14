@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Home from "./components/Home";
 import AddPhoto from "./components/AddPhoto";
+import DetailedCard from "./components/DetailedCard";
 
 function App() {
   const [dataArr, setDataArr] = useState([
@@ -33,6 +34,7 @@ function App() {
           element={<Home itemObject={dataArr} removeBtn={removeBtn} />}
         />
         <Route path="/AddPhoto" element={<AddPhoto itemObj={itemObj} />} />
+        <Route path="/DetailedCard" element={<DetailedCard />} />
       </Routes>
     </div>
   );
