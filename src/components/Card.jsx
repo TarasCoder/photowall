@@ -3,6 +3,11 @@ import s from "./Card.module.css";
 import { FiMessageCircle } from "react-icons/fi";
 
 function Card(props) {
+
+  const showIndex = () => {
+    props.removeBtn(props.id);
+  }
+
   return (
     <div className={s.wrapper}>
       <img
@@ -12,7 +17,7 @@ function Card(props) {
       />
       <p>{props.descr}</p>
       <div className={s.btnGroup}>
-        <button className={s.removeBtn}>Remove</button>
+        <button className={s.removeBtn} onClick={showIndex}>Remove</button>
         <button className={s.commentsBtn}>
           <FiMessageCircle /> 2
         </button>

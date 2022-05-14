@@ -6,6 +6,10 @@ import s from "./Home.module.css";
 
 function Home(props) {
 
+const removeBtn = (id) =>{
+  props.removeBtn(id);
+}
+
   return (
     <div>
       <h1 className="headerText">Photowall</h1>
@@ -15,7 +19,7 @@ function Home(props) {
         </Link>
       </nav>
 
-      <Cards itemObj={props.itemObject}/>
+      <Cards itemObj={props.itemObject} removeBtn={removeBtn} />
     </div>
   );
 }
