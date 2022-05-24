@@ -3,11 +3,13 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 import s from "./DetailedCard.module.css";
 
-function DetailedCard() {
+function DetailedCard(props) {
   const [msg, setMsg] = useState("");
   const [msgs, setMsgs] = useState([]);
   const [msgCount, setMsgCount] = useState(1);
-  
+
+  console.log("Hi from detailed card component: ", props);
+
   const comment = (ev) => {
     setMsg(ev.target.value);
   };
@@ -28,11 +30,11 @@ function DetailedCard() {
       </nav>
       <div className={s.wrapper}>
         <div className={s.cardWrapper}>
-          <Card />
+          <Card items={props} />
         </div>
         <div className={s.comments}>
           {msgs.map((item) => (
-            <p>Hi there {item}</p>
+            <p>{item}</p>
           ))}
           <form onSubmit={enterData}>
             <input

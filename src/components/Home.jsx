@@ -9,6 +9,9 @@ function Home(props) {
 const removeBtn = (id) =>{
   props.removeBtn(id);
 }
+const imageId = (id) =>{
+  props.imageId(id);
+}
 
   return (
     <div>
@@ -19,7 +22,7 @@ const removeBtn = (id) =>{
         </Link>
       </nav>
 
-      <Cards itemObj={props.itemObject} removeBtn={removeBtn} />
+      <Cards itemObj={props.itemObject} imageId={imageId} removeBtn={removeBtn} />
     </div>
   );
 }

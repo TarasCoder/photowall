@@ -1,0 +1,1 @@
+When pressing on image I need to pass ID of that img, so page can be opened on Detailed Card component with propriate img.

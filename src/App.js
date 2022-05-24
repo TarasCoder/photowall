@@ -13,6 +13,7 @@ function App() {
         "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
     },
   ]);
+  const [imgId, setImgId] = useState("");
 
   const itemObj = (obj) => {
     setDataArr((prev) => [...prev, obj]);
@@ -25,16 +26,19 @@ function App() {
         })
       })
   };
+  const imageId = (id) => {
+    setImgId(id);
+  }
 
   return (
     <div className="App">
       <Routes>
         <Route
           path="/"
-          element={<Home itemObject={dataArr} removeBtn={removeBtn} />}
+          element={<Home itemObject={dataArr} imageId={imageId} removeBtn={removeBtn} />}
         />
         <Route path="/AddPhoto" element={<AddPhoto itemObj={itemObj} />} />
-        <Route path="/DetailedCard" element={<DetailedCard />} />
+        <Route path="/DetailedCard" element={<DetailedCard imageId={imgId} arr={dataArr}/>} />
       </Routes>
     </div>
   );
